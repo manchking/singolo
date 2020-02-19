@@ -1,0 +1,164 @@
+body{
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+}
+.wrapper{
+  margin: auto;
+  max-width: 1020px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 89px;
+  background: #2d303a;
+  border-bottom: solid 6px #323746;
+}
+.logo{
+  text-decoration: none;
+}
+.logo-singolo{
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+.logo-singolo_colored{
+  color: #f06c64;
+}
+.header__navigation{
+  padding-top: 8px;
+}
+.nav-bar{
+  display: flex;
+  width: 371px;
+  justify-content: space-between;
+}
+.nav-bar__item{
+  font-size: 12px;
+  font-weight: 700;
+  list-style: none;
+}
+.nav-bar__item:not(:first-child)::before{
+  padding: 0 12px;
+  color: #494e62;
+  content: "·";
+}
+.nav-bar__item a{
+  color: white;
+  text-decoration: none;
+}
+.slider{
+  display: flex;
+  padding: 53px 40px 58px 42px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f06c64;
+  border-bottom: solid 6px #ea676b;
+}
+.slider__btn-left, .slider__btn-right{
+  display: block;
+  content: url(/assets/arrow.png);
+}
+.slider__btn-right{
+  transform: rotate(180deg);
+}
+.slider__iphones-container{
+  display: flex;
+  width: 100%;
+  padding: 0 54px;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider__iphone-horizontal{
+  padding-right: 1px;
+  padding-bottom: 2px;
+}
+.slider__iphone-vertical{
+  
+}
+.our-services{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 62px 40px 28px 40px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: #666d89;
+  border-bottom: solid 6px white;
+}
+.our-services__title{
+  display: inline-block;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+}
+.our-services__subtitle{
+  display: inline-block;
+  margin: auto;
+  padding-top: 21px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: justify;
+}
+.layout-3-column{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+.service-item{
+  display: flex;
+  margin-bottom: 32px;
+  width: 300px;
+  /*flex: 0 0 33.333%;*/
+}
+.service-item__description{
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.service-item__description__title{
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.service-item__description__text{
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+}
+.icon-circle{
+  display: flex;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #666d89;
+  border-radius: 50%;
+}
+.ic{
+  
+}
+.ic_pen{
+  content: url(/assets/icons/ic-pen.png);
+}
+.ic_bulb{
+  content: url(/assets/icons/ic-bulb.png);
+}
+.ic_heart{
+  content: url(/assets/icons/ic-heart.png);
+}
+.ic_phone{
+  content: url(/assets/icons/ic-phone.png);
+}
+.ic_bubble{
+  content: url(/assets/icons/ic-bubble.png);
+}
+.ic_star{
+  content: url(/assets/icons/ic-star.png);
+}
