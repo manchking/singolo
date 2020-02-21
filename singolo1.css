@@ -64,7 +64,7 @@ body{
 }
 .slider__btn-left, .slider__btn-right{
   display: block;
-  content: url(./assets/arrow.png);
+  content: url(assets/arrow.png);
 }
 .slider__btn-right{
   transform: rotate(180deg);
@@ -81,12 +81,12 @@ body{
   justify-content: space-between;
 }
 .iphone-horizontal{
-  content: url(./assets/iphone-horizontal.png);
+  content: url(assets/iphone-horizontal.png);
   padding-right: 1px;
   padding-bottom: 2px;
 }
 .iphone-vertical{
-  content: url(./assets/iphone-vertical.png);
+  content: url(assets/iphone-vertical.png);
 }
 .services{
   display: flex;
@@ -162,20 +162,20 @@ body{
   border-radius: 50%;
 }
 .ic_pen{
-  content: url(./assets/icons/ic-pen.png);
+  content: url(assets/icons/ic-pen.png);
 }
 .ic_bulb{
-  content: url(./assets/icons/ic-bulb.png);
+  content: url(assets/icons/ic-bulb.png);
 }
 .ic_heart{
-  content: url(./assets/icons/ic-heart.png);
+  content: url(assets/icons/ic-heart.png);
 }
 .ic_phone{
-  content: url(./assets/icons/ic-phone.png);
+  content: url(assets/icons/ic-phone.png);
 }
 .ic_bubble{
-  content: url(./assets/icons/ic-bubble.png);
+  content: url(assets/icons/ic-bubble.png);
 }
 .ic_star{
-  content: url(./assets/icons/ic-star.png);
+  content: url(assets/icons/ic-star.png);
 }
