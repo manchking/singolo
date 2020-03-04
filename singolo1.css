@@ -1,78 +1,267 @@
-body{
+@charset "UTF-8";
+body {
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1;
 }
-.wrapper{
-  margin: auto;
-  max-width: 1020px;
-}
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 89px;
-  background: #2d303a;
-  border-bottom: solid 6px #323746;
-}
-.logo{
+
+.logo {
   text-decoration: none;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24.2902px;
+  line-height: 6px;
+  cursor: pointer;
 }
-.logo-singolo{
-  color: white;
-  font-size: 25px;
+.logo_colored {
+  color: #F06C64;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Hairline"), local("Lato-Hairline"), url("/assets/fonts/Lato/latohairline.woff2") format("woff2"), url("/assets/fonts/Lato/latohairline.woff") format("woff"), url("/assets/fonts/Lato/latohairline.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Hairline Italic"), local("Lato-HairlineItalic"), url("/assets/fonts/Lato/latohairlineitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latohairlineitalic.woff") format("woff"), url("/assets/fonts/Lato/latohairlineitalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Thin"), local("Lato-Thin"), url("/assets/fonts/Lato/latothin.woff2") format("woff2"), url("/assets/fonts/Lato/latothin.woff") format("woff"), url("/assets/fonts/Lato/latothin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Thin Italic"), local("Lato-ThinItalic"), url("/assets/fonts/Lato/latothinitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latothinitalic.woff") format("woff"), url("/assets/fonts/Lato/latothinitalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Light"), local("Lato-Light"), url("/assets/fonts/Lato/latolight.woff2") format("woff2"), url("/assets/fonts/Lato/latolight.woff") format("woff"), url("/assets/fonts/Lato/latolight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url("/assets/fonts/Lato/latolightitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latolightitalic.woff") format("woff"), url("/assets/fonts/Lato/latolightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Regular"), local("Lato-Regular"), url("/assets/fonts/Lato/latoregular.woff2") format("woff2"), url("/assets/fonts/Lato/latoregular.woff") format("woff"), url("/assets/fonts/Lato/latoregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Italic"), local("Lato-Italic"), url("/assets/fonts/Lato/latoitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latoitalic.woff") format("woff"), url("/assets/fonts/Lato/latoitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Medium"), local("Lato-Medium"), url("/assets/fonts/Lato/latomedium.woff2") format("woff2"), url("/assets/fonts/Lato/latomedium.woff") format("woff"), url("/assets/fonts/Lato/latomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Medium Italic"), local("Lato-MediumItalic"), url("/assets/fonts/Lato/latomediumitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latomediumitalic.woff") format("woff"), url("/assets/fonts/Lato/latomediumitalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Semibold"), local("Lato-Semibold"), url("/assets/fonts/Lato/latosemibold.woff2") format("woff2"), url("/assets/fonts/Lato/latosemibold.woff") format("woff"), url("/assets/fonts/Lato/latosemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Semibold Italic"), local("Lato-SemiboldItalic"), url("/assets/fonts/Lato/latosemibolditalic.woff2") format("woff2"), url("/assets/fonts/Lato/latosemibolditalic.woff") format("woff"), url("/assets/fonts/Lato/latosemibolditalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"), local("Lato-Bold"), url("/assets/fonts/Lato/latobold.woff2") format("woff2"), url("/assets/fonts/Lato/latobold.woff") format("woff"), url("/assets/fonts/Lato/latobold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
 }
-.logo-singolo_colored{
-  color: #f06c64;
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("/assets/fonts/Lato/latobolditalic.woff2") format("woff2"), url("/assets/fonts/Lato/latobolditalic.woff") format("woff"), url("/assets/fonts/Lato/latobolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
 }
-.header__navigation{
-  margin-top: 8px;
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Heavy"), local("Lato-Heavy"), url("/assets/fonts/Lato/latoheavy.woff2") format("woff2"), url("/assets/fonts/Lato/latoheavy.woff") format("woff"), url("/assets/fonts/Lato/latoheavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
 }
-.nav-bar{
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Heavy Italic"), local("Lato-HeavyItalic"), url("/assets/fonts/Lato/latoheavyitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latoheavyitalic.woff") format("woff"), url("/assets/fonts/Lato/latoheavyitalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Black"), local("Lato-Black"), url("/assets/fonts/Lato/latoblack.woff2") format("woff2"), url("/assets/fonts/Lato/latoblack.woff") format("woff"), url("/assets/fonts/Lato/latoblack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Black Italic"), local("Lato-BlackItalic"), url("/assets/fonts/Lato/latoblackitalic.woff2") format("woff2"), url("/assets/fonts/Lato/latoblackitalic.woff") format("woff"), url("/assets/fonts/Lato/latoblackitalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+.btn-arrow-left, .btn-arrow-right {
+  display: block;
+  content: url("/assets/arrow.png");
+}
+.btn-arrow-left:hover, .btn-arrow-right:hover {
+  cursor: pointer;
+}
+
+.btn-arrow-right {
+  transform: rotate(180deg);
+}
+
+.nav-bar {
   display: flex;
   width: 371px;
   justify-content: space-between;
   padding-top: 2px;
 }
-.nav-bar__item{
-  font-size: 12px;
-  font-weight: 400;
+
+.nav-bar__item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11.6593px;
+  line-height: 6px;
   list-style: none;
-  color: white;
+  color: #FFFFFF;
   user-select: none;
-  line-height: 0;
   transform: scaleY(1.08);
 }
-.nav-bar__item:hover{
+.nav-bar__item:hover {
   cursor: pointer;
-  color: #f06c64;
+  color: #F06C64;
 }
-.nav-bar__item:not(:first-child)::before{
+.nav-bar__item:not(:first-child)::before {
   padding: 0 12px;
   color: #494e62;
   content: "·";
 }
-.slider{
+
+.wrapper {
+  margin: auto;
+  max-width: 1020px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 89px;
+  background: #2D303A;
+  border-bottom: solid 6px #323746;
+}
+
+.header__navigation {
+  margin-top: 8px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 63px 40px 28px 41px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: #666d89;
+  border-bottom: solid 6px white;
+}
+
+.services__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29.6188px;
+}
+
+.services__subtitle {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+
+.services__list__item {
+  margin-bottom: 32px;
+}
+
+.services__list__item__icon {
+  margin-top: 1px;
+  margin-right: 20px;
+}
+
+.service-item {
+  display: flex;
+  width: 31.9%;
+}
+
+.service-item-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item__title {
+  margin: 8px 0 20px 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17.7713px;
+  line-height: 0;
+}
+
+.service-item__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.slider {
   display: flex;
   padding: 53px 40px 58px 42px;
   align-items: center;
   justify-content: flex-start;
-  background-color: #f06c64;
+  background-color: #F06C64;
   border-bottom: solid 6px #ea676b;
 }
-.slider__btn-left, .slider__btn-right{
-  display: block;
-  content: url(assets/arrow.png);
-}
-.slider__btn-right{
-  transform: rotate(180deg);
-}
-.slider__btn-left, .slider__btn-right:hover{
-  cursor: pointer;
-}
-.slider__iphones-container{
+
+.slider__content {
   display: flex;
   margin: auto;
   width: 100%;
@@ -80,80 +269,46 @@ body{
   align-items: center;
   justify-content: space-between;
 }
-.iphone-horizontal{
-  content: url(assets/iphone-horizontal.png);
+
+.iphone-horizontal {
+  content: url("/assets/iphone-horizontal.png");
   padding-right: 1px;
   padding-bottom: 2px;
 }
-.iphone-vertical{
-  content: url(assets/iphone-vertical.png);
+
+.iphone-vertical {
+  content: url("/assets/iphone-vertical.png");
 }
-.services{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 62px 40px 28px 40px;
-  text-align: left;
-  background-color: #f2f2f2;
-  color: #666d89;
-  border-bottom: solid 6px white;
+
+.ic_pen {
+  content: url("/assets/icons/ic-pen.png");
 }
-.services__title{
-  margin: 0;
+
+.ic_bulb {
+  content: url("/assets/icons/ic-bulb.png");
 }
-.services__subtitle{
-  margin-top: 21px;
+
+.ic_heart {
+  content: url("/assets/icons/ic-heart.png");
 }
-.title{
-  font-size: 30px;
-  font-weight: 900;
+
+.ic_phone {
+  content: url("/assets/icons/ic-phone.png");
 }
-.subtitle{
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.7;
-  text-align: justify;
+
+.ic_bubble {
+  content: url("/assets/icons/ic-bubble.png");
 }
-.services__list{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 46px;
+
+.ic_star {
+  content: url("/assets/icons/ic-star.png");
 }
-.services__list__item{
-  margin-bottom: 32px;
-}
-.item{
-  display: flex;
-  width: 300px;
-}
-.item__description{
-  display: flex;
-  flex-direction: column;
-}
-.item__description__title{
-  margin: 8px 0 20px 0;
-}
-.title-small{
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 0;
-}
-.item__description__text{
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: justify;
-  overflow: hidden;
-}
-.service__list__item__icon{
-  margin-top: 1px;
-  margin-right: 20px;
-}
-.icon-circle{
-  display: flex;
+
+.icon-circle {
+  display: inline-flex;
   width: 59px;
   height: 59px;
+  padding-left: 1px;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
@@ -161,21 +316,344 @@ body{
   border: 2px solid #666d89;
   border-radius: 50%;
 }
-.ic_pen{
-  content: url(assets/icons/ic-pen.png);
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
-.ic_bulb{
-  content: url(assets/icons/ic-bulb.png);
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
 }
-.ic_heart{
-  content: url(assets/icons/ic-heart.png);
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
 }
-.ic_phone{
-  content: url(assets/icons/ic-phone.png);
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
-.ic_bubble{
-  content: url(assets/icons/ic-bubble.png);
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
-.ic_star{
-  content: url(assets/icons/ic-star.png);
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*# sourceMappingURL=singolo1.css.map */
