@@ -128,7 +128,7 @@ body {
 }
 .btn-arrow-left, .btn-arrow-right {
   display: block;
-  content: url("/assets/arrow.png");
+  content: url("assets/arrow.png");
 }
 .btn-arrow-left:hover, .btn-arrow-right:hover {
   cursor: pointer;
