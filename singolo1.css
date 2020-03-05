@@ -5,6 +5,22 @@ body {
   line-height: 1;
 }
 
+.title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29.6188px;
+}
+
+.subtitle {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+
 .logo {
   text-decoration: none;
   color: #FFFFFF;
@@ -164,23 +180,6 @@ body {
   color: #494e62;
   content: "·";
 }
-.slider{
-  display: flex;
-  padding: 53px 40px 58px 42px;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #f06c64;
-  border-bottom: solid 6px #ea676b;
-}
-.slider__btn-left, .slider__btn-right{
-  display: block;
-  content: url(assets/arrow.png);
-}
-.slider__btn-right{
-  transform: rotate(180deg);
-}
-.slider__btn-left, .slider__btn-right:hover{
-  cursor: pointer;
 
 .wrapper {
   margin: auto;
@@ -196,13 +195,6 @@ body {
   background: #2D303A;
   border-bottom: solid 6px #323746;
 }
-.iphone-horizontal{
-  content: url(assets/iphone-horizontal.png);
-  padding-right: 1px;
-  padding-bottom: 2px;
-}
-.iphone-vertical{
-  content: url(assets/iphone-vertical.png);
 
 .header__navigation {
   margin-top: 8px;
@@ -216,22 +208,6 @@ body {
   background-color: #f2f2f2;
   color: #666d89;
   border-bottom: solid 6px white;
-}
-
-.services__title {
-  margin: 0;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 29.6188px;
-}
-
-.services__subtitle {
-  margin-top: 21px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: justify;
 }
 
 .services__list {
@@ -339,24 +315,6 @@ body {
   box-sizing: border-box;
   border: 2px solid #666d89;
   border-radius: 50%;
-}
-.ic_pen{
-  content: url(assets/icons/ic-pen.png);
-}
-.ic_bulb{
-  content: url(assets/icons/ic-bulb.png);
-}
-.ic_heart{
-  content: url(assets/icons/ic-heart.png);
-}
-.ic_phone{
-  content: url(assets/icons/ic-phone.png);
-}
-.ic_bubble{
-  content: url(assets/icons/ic-bubble.png);
-}
-.ic_star{
-  content: url(assets/icons/ic-star.png);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

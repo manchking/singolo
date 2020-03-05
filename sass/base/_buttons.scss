@@ -1,0 +1,11 @@
+.btn-arrow-left, .btn-arrow-right{
+  display: block;
+  content: url("assets/arrow.png");
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+.btn-arrow-right{
+  transform: rotate(180deg);
+}

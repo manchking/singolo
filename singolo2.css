@@ -1,3 +1,37 @@
+body {
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+}
+
+.title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29.6188px;
+}
+
+.subtitle {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.btn-arrow-left, .btn-arrow-right {
+  display: block;
+  content: url("assets/arrow.png");
+}
+.btn-arrow-left:hover, .btn-arrow-right:hover {
+  cursor: pointer;
+}
+
+.btn-arrow-right {
+  transform: rotate(180deg);
+}
+
 .ic_pen {
   content: url("/assets/icons/ic-pen.png");
 }
@@ -49,6 +83,105 @@
   box-sizing: border-box;
   border: 2px solid #666d89;
   border-radius: 50%;
+}
+
+.portfolio {
+  background-color: #2D303A;
+  padding: 69.5px 42px 49.5px 42px;
+  border-bottom: 6px solid #323746;
+}
+
+.title {
+  color: #666d89;
+}
+
+.subtitle {
+  color: #666d89;
+}
+
+.gallery__sorting {
+  display: flex;
+  padding-bottom: 16px;
+}
+
+.sorting-button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  color: #666d89;
+  border: solid 1px #666d89;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+.sorting-button:hover {
+  color: #DEDEDE;
+  border: solid 1px #DEDEDE;
+}
+
+.galley_preview {
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1020px;
+}
+
+.layout-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item-4-column {
+  flex-basis: 20%;
+}
+
+.item-3-column {
+  flex-basis: 31.9%;
+}
+
+.about-us {
+  padding: 66px 40px 46px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #FFFFFF;
+}
+
+.about-us__photo {
+  padding: 20px 0 16px;
+}
+
+.item {
+  padding: 20px 0;
+}
+
+.item__title {
+  font-weight: 900;
+  font-size: 17.7713px;
+  line-height: 18px;
+  color: #666d89;
+}
+
+.item__text {
+  padding: 20px 0 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+}
+
+.item__contacts {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=singolo2.css.map */
