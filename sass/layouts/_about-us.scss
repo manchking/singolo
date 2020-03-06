@@ -1,13 +1,13 @@
 .about-us{
-  padding: 66px 40px 46px;
+  padding: 63px 40px 46px;
   background-color: $color-background;
   border-bottom: 6px solid $color-brand-bright;
 }
 .about-us__photo{
-  padding: 20px 0 16px;
+  padding: 20px 0 15px;
 }
 .item{
-  padding: 20px 0;
+  padding: 25px 0;
 }
 .item__title{
   font-weight: 900;
@@ -16,15 +16,17 @@
   color: $color-content;
 }
 .item__text{
-  padding: 20px 0 30px;
+  padding: 10px 0 22px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 22px;
+  text-align: justify;
+  overflow: hidden;
   color: $color-text-light;
 }
 .item__contacts{
-  width: 50%;
+  width: 51%;
   display: flex;
-  justify-content: space-between;;
+  justify-content: space-between;
 }

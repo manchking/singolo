@@ -1,6 +1,6 @@
 .portfolio{
   background-color: $color-brand-dark;
-  padding: 69.5px 42px 49.5px 42px;
+  padding: 63.5px 40px 47.5px 40px;
   border-bottom: 6px solid $color-header-border;
 }
 .title{
@@ -10,7 +10,7 @@
   color: $color-content;
 }
 .gallery{
-  
+  padding-top: 10px;
 }
 .gallery__sorting{
   display: flex;
@@ -23,7 +23,7 @@
   border-radius: 6px;
   font-size: 12px;
   line-height: 22px;
-  padding: 0 8px;
+  padding: 0 7px;
   margin-right: 8px;
 
   &:hover{
@@ -31,6 +31,12 @@
     border: solid 1px $color-content-light;
   }
 }
+.gallery__images{
+  margin-top: 2px;
+}
 .galley_preview{
   padding-bottom: 20px;
+  &:nth-child(n+13){
+    display: none;
+  }
 }
