@@ -2,23 +2,34 @@
 body {
   margin: 0 auto;
   font-family: "Lato", sans-serif;
-  line-height: 1;
+  line-height: 0;
 }
 
-.title {
-  margin: 0;
+h2 {
+  line-height: 18px;
   font-style: normal;
   font-weight: 900;
   font-size: 29.6188px;
 }
 
+h3 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17.7713px;
+}
+
 .subtitle {
-  margin-top: 21px;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
   text-align: justify;
+}
+.subtitle_small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
 }
 
 .logo {
@@ -203,53 +214,54 @@ body {
 .services {
   display: flex;
   flex-wrap: wrap;
-  padding: 63px 40px 28px 41px;
+  padding: 44px 40px 28px 40px;
   text-align: left;
   background-color: #f2f2f2;
   color: #666d89;
   border-bottom: solid 6px white;
 }
 
+.services__subtitle {
+  padding-top: 2px;
+}
+
 .services__list {
+  margin-top: 37px;
+}
+
+.services__item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 46px;
+  margin-bottom: 21px;
 }
 
-.services__list__item {
-  margin-bottom: 32px;
-}
-
-.services__list__item__icon {
-  margin-top: 1px;
+.services__item__icon {
+  margin-top: 10px;
   margin-right: 20px;
 }
 
-.service-item {
-  display: flex;
-  width: 31.9%;
+.services__item__description {
+  display: block;
 }
 
-.service-item-description {
-  display: flex;
-  flex-direction: column;
-}
-
-.service-item__title {
-  margin: 8px 0 20px 0;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 17.7713px;
-  line-height: 0;
-}
-
-.service-item__text {
+.services__item__text {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: justify;
   overflow: hidden;
+  text-align: justify;
+}
+
+.layout-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item-4-column {
+  flex-basis: 20%;
+}
+
+.item-3-column {
+  flex-basis: 31.9%;
 }
 
 .slider {
@@ -304,15 +316,31 @@ body {
   content: url("/assets/icons/ic-star.png");
 }
 
+.ic_twitter {
+  content: url("/assets/icons/ic-twitter.png");
+}
+
+.ic_google {
+  content: url("/assets/icons/ic-google.png");
+}
+
+.ic_facebook {
+  content: url("assets/icons/ic-facebook.png");
+}
+
+.ic_linkedin {
+  content: url("assets/icons/ic-linkedin.png");
+}
+
 .icon-circle {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 59px;
   height: 59px;
   padding-left: 1px;
   flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
   border: 2px solid #666d89;
   border-radius: 50%;
 }

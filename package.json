@@ -6,6 +6,7 @@
   "scripts": {
     "singolo1": "sass --watch sass/singolo1.scss singolo1.css",
     "singolo2": "sass --watch sass/singolo2.scss singolo2.css",
+    "singolo3": "sass --watch sass/singolo3.scss singolo3.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -28,15 +28,26 @@
 .ic_linkedin{
   content: url("assets/icons/ic-linkedin.png");
 }
+.ic_contact{
+  &-location{
+    content: url("/assets/icons/ic-contact-location.png");
+  }
+  &-mail{
+    content: url("/assets/icons/ic-contact-mail.png");
+  }
+  &-phone{
+    content: url("/assets/icons/ic-contact-phone.png");
+  }
+}
 .icon-circle{
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 59px;
   height: 59px;
   padding-left: 1px;
   flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
   border: 2px solid $color-content;
   border-radius: 50%;
 }
