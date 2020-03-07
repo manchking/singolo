@@ -1,0 +1,42 @@
+.portfolio{
+  background-color: $color-brand-dark;
+  padding: 63.5px 40px 47.5px 40px;
+  border-bottom: 6px solid $color-header-border;
+}
+.title{
+  color: $color-content;
+}
+.subtitle{
+  color: $color-content;
+}
+.gallery{
+  padding-top: 10px;
+}
+.gallery__sorting{
+  display: flex;
+  padding-bottom: 16px;
+}
+.sorting-button{
+  @include button-reset;
+  color: $color-content;
+  border: solid 1px $color-content;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0 7px;
+  margin-right: 8px;
+
+  &:hover{
+    color: $color-content-light;
+    border: solid 1px $color-content-light;
+  }
+}
+.gallery__images{
+  margin-top: 2px;
+}
+.galley_preview{
+  padding-bottom: 20px;
+  &:nth-child(n+13){
+    display: none;
+  }
+}

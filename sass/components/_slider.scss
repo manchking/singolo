@@ -1,0 +1,16 @@
+.slider{
+  display: flex;
+  padding: 53px 40px 58px 42px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $color-brand;
+  border-bottom: solid 6px $color-slider-border;
+}
+.slider__content{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding: 0 54px;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -7,20 +7,20 @@
 </head>
 <body>
   <div class="wrapper">
-    <section class="portfolio"></section>
+    <section class="portfolio">
       <div class="title">Portfolio</div>
       <div class="subtitle">
         Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
          eget lacinia odio sem nec elit.
       </div>
       <div class="gallery">
-        <div class="sorting">
-          <input class="sorting__button" type="button" value="All">
-          <input class="sorting__button" type="button" value="Web Design">
-          <input class="sorting__button" type="button" value="Graphic Design">
-          <input class="sorting__button" type="button" value="Artwork">
+        <div class="gallery__sorting">
+          <input class="sorting-button" type="button" value="All">
+          <input class="sorting-button" type="button" value="Web Design">
+          <input class="sorting-button" type="button" value="Graphic Design">
+          <input class="sorting-button" type="button" value="Artwork">
         </div>
-        <div class="layout-4-column">
+        <div class="layout-column gallery__images">
           <img src="assets/gallery/prev-imgs/prev1.png" alt="preview image" 
           class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev2.png" alt="preview image" 
@@ -29,16 +29,23 @@
           class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev4.png" alt="preview image" 
           class="item-4-column galley_preview">
-          <img src="assets/gallery/prev-imgs/prev5.png" alt="preview image" c
-          lass="item-4-column galley_preview">
+          <img src="assets/gallery/prev-imgs/prev5.png" alt="preview image" 
+          class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev6.png" alt="preview image" 
           class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev7.png" alt="preview image" 
           class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev8.png" alt="preview image" 
-          lass="item-4-column galley_preview">
+          class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev9.png" alt="preview image" 
           class="item-4-column galley_preview">
+          <img src="assets/gallery/prev-imgs/prev10.png" alt="preview image" 
+          class="item-4-column galley_preview">
+          <img src="assets/gallery/prev-imgs/prev11.png" alt="preview image" 
+          class="item-4-column galley_preview">
+          <img src="assets/gallery/prev-imgs/prev12.png" alt="preview image" 
+          class="item-4-column galley_preview">
+
           <img src="assets/gallery/prev-imgs/prev10.png" alt="preview image" 
           class="item-4-column galley_preview">
           <img src="assets/gallery/prev-imgs/prev11.png" alt="preview image" 
@@ -55,9 +62,9 @@
         non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
       </div>
-      <div class="layout-3-column">
-        <div class="item 3-column-item">
-          <img src="assets/about-us/photos/adam-jensen.png" alt="photo" class="about-us_photo">
+      <div class="layout-column">
+        <div class="item item-3-column">
+          <img src="assets/about-us/photos/adam-jensen.png" alt="photo" class="about-us__photo">
           <div class="item__title">Adam Jensen</div>
           <div class="item__text">Quisque luctus, quam eget molestie commodo, 
             lacus purus cursus purus, nec rutrum tellus dolor id lorem.
@@ -69,27 +76,31 @@
             <span class="ic_linkedin"></span>
           </div>
         </div>
-        <div class="item 3-column-item">
-          <img src="assets/about-us/photos/desmond-miles.png" alt="photo" class="about-us_photo">
+        <div class="item item-3-column">
+          <img src="assets/about-us/photos/desmond-miles.png" alt="photo" class="about-us__photo">
           <div class="item__title">Desmond Miles</div>
           <div class="item__text">Curabitur vestibulum eget mauris quis laoreet. 
             Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
           </div>
-          <span class="ic_facebook"></span>
-          <span class="ic_google"></span>
-          <span class="ic_twitter"></span>
-          <span class="ic_linkedin"></span>
+          <div class="item__contacts">
+            <span class="ic_facebook"></span>
+            <span class="ic_google"></span>
+            <span class="ic_twitter"></span>
+            <span class="ic_linkedin"></span>
+          </div>
         </div>
-        <div class="item 3-column-item">
-          <img src="assets/about-us/photos/scolara-visari.png" alt="photo" class="about-us_photo">
+        <div class="item item-3-column">
+          <img src="assets/about-us/photos/scolara-visari.png" alt="photo" class="about-us__photo">
           <div class="item__title">Scolara Visari</div>
           <div class="item__text">Nulla sed nunc et tortor luctus faucibus.
              Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
           </div>
-          <span class="ic_facebook"></span>
-          <span class="ic_google"></span>
-          <span class="ic_twitter"></span>
-          <span class="ic_linkedin"></span>
+          <div class="item__contacts">
+            <span class="ic_facebook"></span>
+            <span class="ic_google"></span>
+            <span class="ic_twitter"></span>
+            <span class="ic_linkedin"></span>
+          </div>
         </div>
       </div>
     </section>
