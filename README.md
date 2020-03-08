@@ -1,2 +1,2 @@
 # singolo
-https://manchking.github.io/singolo/singolo1.html
+https://manchking.github.io/singolo/index.html
