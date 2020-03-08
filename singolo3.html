@@ -16,47 +16,62 @@
       </div>
       <div class="get-a-quote__form-container">
         <form action="" class="get-a-quote__form form-contact">
-          <input class="form-contact__name" type="text" placeholder="Name (Required)">
-          <input class="form-contact__email" type="email" placeholder="Email (Required)">
-          <input class="form-contact__subject" type="text" placeholder="Subject">
-          <textarea 
-            class="form-contact__describe"
-            name="" 
-            id="" 
-            cols="30" 
-            rows="8"
-            placeholder="Describe your project in detail..."></textarea>
-        </form>
-        <div class="get-a-quote__contacts">
-          <h3>Contact Information</h3>
-          <div class="get-a-quote__contacts__subtitle subtitle_small">
-            Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. 
-            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
-            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
-            et consequat felis.
-            <div class="get-a-quote__contacts__container">
-              <p class="get-a-quote__contacts__icons">
-                <br><span class="ic_contact-location"></span>
-                <br><span class="ic_contact-phone"></span>
-                <br><span class="ic_contact-mail"></span>
-              </p>
-              <p class="get-a-quote__contacts__data"> 
-                <br>Elm St. 14/05 Lost City
-                <br>03528 331 86 35
-                <br>info@singolo.com
-              </p>              
+          <div class="form-contact__container">
+            <input class="form-contact__name" 
+              type="text" 
+              placeholder="Name (Required)" 
+              required="required" 
+              pattern="^[A-Za-zА-Яа-яЁё\s]+$">
+            <input class="form-contact__email" 
+              type="email" 
+              placeholder="Email (Required)" 
+              required="required">
+            <input 
+              class="form-contact__subject" 
+              type="text" 
+              placeholder="Subject">
+            <textarea 
+              class="form-contact__describe"
+              name="" 
+              id="" 
+              cols="30" 
+              rows="8"
+              placeholder="Describe your project in detail..."></textarea>
+          </div>
+          <div class="form-contact__contacts">
+            <h3 class="form-contact__contacts__title">Contact Information</h3>
+            <div class="form-contact__contacts__subtitle subtitle_small">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. 
+              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
+              et consequat felis.
+              <div class="form-contact__contacts__container">
+                <p class="form-contact__contacts__icons">
+                  <br><span class="ic_contact-location"></span>
+                  <br><span class="ic_contact-phone"></span>
+                  <br><span class="ic_contact-mail"></span>
+                </p>
+                <p class="form-contact__contacts__data"> 
+                  <br>Elm St. 14/05 Lost City
+                  <br><a href="tel:+035283318635">03528 331 86 35</a>
+                  <br><a href="mailto:info@singolo.com">info@singolo.com</a>
+                </p>
+              </div>
+              <input class="form-contact__submit-btn" 
+                type="submit" 
+                value="SEND YOUR INFO">
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <footer class="footer">
       <p class="footer__copyright subtitle_small">&copy; Copyright 2013</p>
       <div class="footer__social">
-        <span class="ic_facebook"></span>
-        <span class="ic_google"></span>
-        <span class="ic_twitter"></span>
-        <span class="ic_linkedin"></span>
+        <a class="ic_facebook" href=""></a>
+        <a class="ic_google" href=""></a>
+        <a class="ic_twitter" href=""></a>
+        <a class="ic_linkedin" href=""></a>
       </div>
     </footer>
   </div>
