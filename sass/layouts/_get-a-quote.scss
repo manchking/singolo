@@ -9,9 +9,6 @@
 }
 .get-a-quote__form-container{
   margin-top: 35px;
-  display: flex;
-  justify-content: space-between;
-  align-content: stretch;
 }
 .get-a-quote__form{
   padding-top: 9px;
@@ -19,23 +16,4 @@
 }
 .get-a-quote__form textarea{
   height: 202px;
-}
-.get-a-quote__contacts{
-  flex-basis: 31.9%;
-}
-.get-a-quote__contacts__subtitle{
-  text-align: justify;
-}
-.get-a-quote__contacts__icons{
-  display: block;
-  text-align: center;
-  margin-right: 10px;
-}
-.get-a-quote__contacts__data{
-  display: block;
-  text-align: left;
-}
-.get-a-quote__contacts__container{
-  display: flex;
-  margin-top: -13px;
 }

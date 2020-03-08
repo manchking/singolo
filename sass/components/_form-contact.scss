@@ -1,29 +1,93 @@
 .form-contact{
+  display: flex;
+}
+.form-contact__container{
+  flex-basis: 100%;
+
+  & > input, textarea{
+    display: block;
+    margin-bottom: 16px;
+    padding: 8px 15px;
+    color: $color-text-pinky-light;
+    background-color: $color-background-pinky;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  & > input{
+    width: 100%;
+  }
+  & > textarea{
+    width: 100%;
+    resize: none;
+  }
+  & > ::placeholder{
+    color: $color-text-pinky;
+  }
+}
+.form-contact__contacts{
+  flex-basis: 48.4%;
+  margin-left: 20px;
+  margin-top: -9px;
+}
+.form-contact__contacts__title{
+  font-weight: bold;
+  letter-spacing: .2px;
+}
+.form-contact__contacts__subtitle{
+  text-align: justify;
+  word-spacing: -1px;
+}
+.form-contact__contacts__icons{
   display: block;
+  text-align: center;
+  margin-right: 10px;
 }
-input, textarea{
-  margin-bottom: 16px;
-  padding: 8px 15px;
-  color: $color-text-pinky;
-  background-color: $color-background-pinky;
-  border-radius: 6px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 22px;
-  box-sizing: border-box;
-}
-input{
+.form-contact__contacts__data{
   display: block;
-  width: 100%;
-  border: none;
+  text-align: left;
+  letter-spacing: .2px;
+  & > a {
+    text-decoration: none;
+    color: $color-text-pinky-light;
+  }
 }
-textarea{
-  width: 100%;
-  resize: none;
-  border: none;
+.form-contact__contacts__container{
+  display: flex;
+  margin-top: -13px;
 }
-::placeholder{
-  color: $color-text-pinky;
+.form-contact__submit-btn{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 8px 15px;
+    color: $color-content-light;
+    //background: linear-gradient(180deg, $color-text-pinky 0%, $color-background-pinky 50%, $color-brand 100%);
+    background-color: $color-background-pinky;
+    border: solid 1px $color-text-pinky;
+    border-radius: 6px;
+    -webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+
+    &:hover{
+      border: solid 1px white;
+      transition: ease-out 0.3s;
+      background-color: $color-text-pinky-light;
+      color: $color-brand;
+    }
 }

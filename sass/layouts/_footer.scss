@@ -14,7 +14,7 @@
 }
 .footer__social{
   display: flex;
-  & span{
+  & > *{
     margin-left: 8px;
   }
 }

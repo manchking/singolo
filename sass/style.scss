@@ -16,12 +16,16 @@
 @import "layouts/header";
 @import "layouts/services";
 @import "layouts/column-layouts";
+@import "layouts/portfolio";
+@import "layouts/about-us";
+@import "layouts/get-a-quote";
+@import "layouts/footer";
 
 // Components
 @import "components/slider";
 @import "components/iphone";
 @import "components/icons";
+@import "components/form-contact";
 
 // Vendors
 @import "vendors/normalize";
-

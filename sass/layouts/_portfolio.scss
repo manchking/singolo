@@ -1,40 +1,43 @@
 .portfolio{
   background-color: $color-brand-dark;
-  padding: 63.5px 40px 47.5px 40px;
+  padding: 44px 40px 22px 40px;
   border-bottom: 6px solid $color-header-border;
 }
-.title{
+.portfolio__title{
   color: $color-content;
 }
-.subtitle{
+.portfolio__subtitle{
+  padding-top: 2px;
   color: $color-content;
 }
 .gallery{
-  padding-top: 10px;
+  padding-top: 11px;
 }
 .gallery__sorting{
   display: flex;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
 }
 .sorting-button{
   @include button-reset;
   color: $color-content;
   border: solid 1px $color-content;
-  border-radius: 6px;
+  border-radius: 5px;
   font-size: 12px;
-  line-height: 22px;
-  padding: 0 7px;
-  margin-right: 8px;
+  font-weight: normal;
+  line-height: 0;
+  padding: 10px 6px;
+  margin-right: 10px;
 
   &:hover{
     color: $color-content-light;
     border: solid 1px $color-content-light;
+    transition: 0.3s;
   }
 }
 .gallery__images{
   margin-top: 2px;
 }
-.galley_preview{
+.gallery_preview{
   padding-bottom: 20px;
   &:nth-child(n+13){
     display: none;
