@@ -7,28 +7,45 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header id="home" class="header">
       <h1 class="logo">SINGOLO<span class="logo_colored">*</span></h1>
       <nav class="header__navigation">
         <ul class="nav-bar">
-          <li class="nav-bar__item">HOME</li>
-          <li class="nav-bar__item">SERVICES</li>
-          <li class="nav-bar__item">PORTFOLIO</li>
-          <li class="nav-bar__item">ABOUT</li>
-          <li class="nav-bar__item">CONTACT</li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__item__link_active" href="#home">HOME</a>
+          </li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__item__link" href="#services">SERVICES</a>
+          </li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__item__link" href="#portfolio">PORTFOLIO</a>
+          </li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__item__link" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-bar__item">
+            <a class="nav-bar__item__link" href="#contact">CONTACT</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="slider">
-        <div class="btn-arrow-left"></div>
-        <div class="slider__content">
-          <div class="iphone-vertical"></div>
-          <div class="iphone-horizontal"></div>
+        <div class="slide1">
+          <div class="slider__prev btn-arrow-left"></div>
+          <div class="slide1__content">
+            <div class="phone__vertical iphone-vertical" data-active="true"></div>
+            <div class="phone__horizontal iphone-horizontal" data-active="true"></div>
+          </div>
+          <div class="slider__next btn-arrow-right"></div>
         </div>
-        <div class="btn-arrow-right"></div>
+        <div class="slide2">
+          <div class="slider__prev btn-arrow-left"></div>
+          <div class="slide2__content"></div>
+          <div class="slider__next btn-arrow-right"></div>
+        </div>
       </section>
-      <section class="services">
+      <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="services__subtitle subtitle">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -110,7 +127,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
         <h2 class="portfolio__title">Portfolio<h2>
         <div class="portfolio__subtitle subtitle">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -118,40 +135,52 @@
         </div>
         <div class="gallery">
           <div class="gallery__sorting">
-            <input class="sorting-button" type="button" value="All">
+            <input class="sorting-button sorting-button_active" type="button" value="All">
             <input class="sorting-button" type="button" value="Web Design">
             <input class="sorting-button" type="button" value="Graphic Design">
             <input class="sorting-button" type="button" value="Artwork">
           </div>
           <div class="layout-column gallery__images">
             <img src="assets/gallery/prev-imgs/prev1.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="web design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev2.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="graphic design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev3.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="graphic design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev4.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="graphic design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev5.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="artwork"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev6.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="web design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev7.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="artwork"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev8.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="web design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev9.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="web design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev10.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="artwork"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev11.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="graphic design"
+              class="item-4-column gallery__preview">
             <img src="assets/gallery/prev-imgs/prev12.png" alt="preview image" 
-            class="item-4-column gallery_preview">
+              data-tag="web design"
+              class="item-4-column gallery__preview">
           </div>
         </div>
       </section>
-      <section class="about-us">
+      <section id="about" class="about-us">
         <h2 class="about-us__title">About Us</h2>
         <div class="about-us__subtitle subtitle">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
@@ -200,7 +229,7 @@
           </div>
         </div>
       </section>
-      <section class="get-a-quote">
+      <section id="contact" class="get-a-quote">
         <h2>Get a Quote</h2>
         <div class="get-a-quote__subtitle subtitle">Fusce dapibus, tellus ac cursus commodo, 
           tortor mauris condimentum. Duis mollis, non commodo luctus, 
@@ -208,25 +237,27 @@
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </div>
         <div class="get-a-quote__form-container">
-          <form action="" class="get-a-quote__form form-contact">
+          <form name="contact" action="" class="get-a-quote__form form-contact">
             <div class="form-contact__container">
               <input class="form-contact__name" 
+                name="name"
                 type="text" 
                 placeholder="Name (Required)" 
                 required="required" 
                 pattern="^[A-Za-zА-Яа-яЁё\s]+$">
               <input class="form-contact__email" 
+                name="email"
                 type="email" 
                 placeholder="Email (Required)" 
                 required="required">
               <input 
                 class="form-contact__subject" 
+                name="subject"
                 type="text" 
                 placeholder="Subject">
               <textarea 
                 class="form-contact__describe"
-                name="" 
-                id="" 
+                name="description" 
                 cols="30" 
                 rows="8"
                 placeholder="Describe your project in detail..."></textarea>
@@ -247,10 +278,11 @@
                   <p class="form-contact__contacts__data"> 
                     <br>Elm St. 14/05 Lost City
                     <br><a href="tel:+035283318635">03528 331 86 35</a>
-                    <br><a href="mailto:info@singolo.com" target="_blank">info@singolo.com</a>
+                    <br><a href="mailto:info@singolo.com">info@singolo.com</a>
                   </p>
                 </div>
                 <input class="form-contact__submit-btn" 
+                  name="submit"
                   type="submit" 
                   value="SEND YOUR INFO">
               </div>
@@ -258,16 +290,17 @@
           </form>
         </div>
       </section>
+      <footer class="footer">
+        <p class="footer__copyright subtitle_small">&copy; Copyright 2013</p>
+        <div class="footer__social">
+          <a class="ic_facebook" href=""></a>
+          <a class="ic_google" href=""></a>
+          <a class="ic_twitter" href=""></a>
+          <a class="ic_linkedin" href=""></a>
+        </div>
+      </footer>
     </main>
-    <footer class="footer">
-      <p class="footer__copyright subtitle_small">&copy; Copyright 2013</p>
-      <div class="footer__social">
-        <a class="ic_facebook" href=""></a>
-        <a class="ic_google" href=""></a>
-        <a class="ic_twitter" href=""></a>
-        <a class="ic_linkedin" href=""></a>
-      </div>
-    </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
