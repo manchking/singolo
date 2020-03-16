@@ -27,19 +27,30 @@
   line-height: 0;
   padding: 10px 6px;
   margin-right: 10px;
-
+  outline: none;
+  
   &:hover{
     color: $color-content-light;
     border: solid 1px $color-content-light;
     transition: 0.3s;
   }
 }
+.sorting-button_active{
+  color: $color-content-light;
+  border: solid 1px $color-content-light;
+}
 .gallery__images{
   margin-top: 2px;
 }
-.gallery_preview{
-  padding-bottom: 20px;
+.gallery__preview{
+  margin-bottom: 20px;
   &:nth-child(n+13){
     display: none;
+  }
+  &_active{
+    box-shadow: 0px 0px 0px 5px rgba(240,108,100,1);
+  }
+  &:hover{
+    cursor: pointer;
   }
 }

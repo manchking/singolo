@@ -1,16 +1,61 @@
 .slider{
+  position: relative;
+  padding-bottom: 600px;
+}
+.slide1{
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
   display: flex;
   padding: 53px 40px 58px 42px;
   align-items: center;
   justify-content: flex-start;
   background-color: $color-brand;
   border-bottom: solid 6px $color-slider-border;
+  transition: .5s;
+  z-index: 10;
+
+  &__content{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 0 54px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
-.slider__content{
-  display: flex;
-  margin: auto;
+.slide2{
+  box-sizing: border-box;
+  position: absolute;
   width: 100%;
-  padding: 0 54px;
+  display: flex;
+  padding: 53px 40px 28px 42px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  background-color: $color-slider-second;
+  background-image: linear-gradient(rgba(100, 139, 240, .5), rgba(100, 139, 240, .5)), url(assets/slide2_bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-bottom: solid 6px $color-slider-second;
+  transition: .5s;
+  opacity: 0;
+
+  &__content{
+    display: flex;
+    margin: auto;
+    //width: 100%;
+    content: url(assets/slide2_phone.png);
+    padding: 0 54px;
+    align-items: center;
+    justify-content: center;
+  }
+}.slide2 .slider__next, .slide2 .slider__prev{
+  margin-bottom: 30px;
+}
+.phone__vertical{
+  
+}
+.phone__horizontal{
+  padding-right: 1px;
+  padding-bottom: 2px;
 }

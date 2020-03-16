@@ -1,8 +1,12 @@
 .iphone-horizontal{
   content: url('assets/iphone-horizontal.png');
-  padding-right: 1px;
-  padding-bottom: 2px;
 }
 .iphone-vertical{
   content: url('assets/iphone-vertical.png');
+}
+.iphone-vertical_disabled{
+  content: url('assets/phone-vertical_disabled.png');
+}
+.iphone-horizontal_disabled{
+  content: url('assets/phone-horizontal_disabled.png');
 }

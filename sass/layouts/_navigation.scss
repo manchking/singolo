@@ -6,15 +6,23 @@
 }
 .nav-bar__item{
   font-style: normal;
-  //font-weight: bold;
   font-size: 11.6593px;
   line-height: 6px;
   list-style: none;
-  color: $color-brand-bright;
   user-select: none;
   transform: scaleY(1.08);
 
-  &:hover{
+  &__link{
+    color: $color-brand-bright;
+    text-decoration: none;
+    &_active{
+      color: $color-brand;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  &__link:hover{
     cursor: pointer;
     color: $color-brand;
     transition: 0.2s;
