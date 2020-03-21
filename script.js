@@ -4,7 +4,7 @@ window.onload = function() {
   addSliderClickHandler();
   addGalleryClickHandler();
   showHideModal();
-  
+  windowScrollHandler();
 }
 
 // Navigation
@@ -12,9 +12,70 @@ const addNavClickHandler = () => {
   document.querySelector('.nav-bar').addEventListener('click', (event) => {
     if(event.target.classList.contains('nav-bar__item__link')) {
       let clickedItem = event.target;
-      let removeItem = document.querySelector('.nav-bar__item__link_active');
-      removeItem.className = 'nav-bar__item__link';
-      clickedItem.className = 'nav-bar__item__link_active';
+      switch(clickedItem.innerHTML){
+        case 'HOME':
+          scrollToId('home');
+          break;
+        case 'SERVICES':
+          scrollToId('services');
+          break;
+        case 'PORTFOLIO':
+          scrollToId('portfolio');
+          break;
+        case 'ABOUT':
+          scrollToId('about');
+          break;
+        case 'CONTACT':
+          scrollToId('contact');
+          break;
+      }
+    }
+  });
+}
+
+const scrollToId = (id) => {
+  let el = document.getElementById(id);
+  let navBarHeight = document.getElementById('home').offsetHeight;
+  let y = el.getBoundingClientRect().top - navBarHeight;
+  if(id !== 'home') y += pageYOffset;
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  })
+}
+
+const windowScrollHandler = () => {
+  let activeNav = document.getElementById('nav-bar_home');
+  window.addEventListener('scroll', (event) => {
+    let servicesPosY = document.getElementById('services').getBoundingClientRect().top;
+    let portfolioPosY = document.getElementById('portfolio').getBoundingClientRect().top;
+    let aboutPosY = document.getElementById('about').getBoundingClientRect().top;
+    let contactPosY = document.getElementById('contact').getBoundingClientRect().top;
+    let prevNav = document.querySelector('.nav-bar__item__link_active');
+    if(window.pageYOffset < 70){
+      activeNav = document.getElementById('nav-bar_home');
+      prevNav.className = 'nav-bar__item__link';
+      activeNav.className = 'nav-bar__item__link_active';
+    }
+    if(Math.abs(servicesPosY) < 100){
+      activeNav = document.getElementById('nav-bar_services');
+      prevNav.className = 'nav-bar__item__link';
+      activeNav.className = 'nav-bar__item__link_active';
+    }
+    if(Math.abs(portfolioPosY) < 100){
+      activeNav = document.getElementById('nav-bar_portfolio');
+      prevNav.className = 'nav-bar__item__link';
+      activeNav.className = 'nav-bar__item__link_active';
+    }
+    if(Math.abs(aboutPosY) < 100){
+      activeNav = document.getElementById('nav-bar_about');
+      prevNav.className = 'nav-bar__item__link';
+      activeNav.className = 'nav-bar__item__link_active';
+    }
+    if(Math.abs(contactPosY) < 370){
+      activeNav = document.getElementById('nav-bar_contact');
+      prevNav.className = 'nav-bar__item__link';
+      activeNav.className = 'nav-bar__item__link_active';
     }
   })
 }
@@ -106,7 +167,7 @@ const showHideModal = () => {
 
 // Slider
 const addSliderClickHandler = () => {
-  let slides = Array.from(document.querySelector('.slider').children);
+  let slides = Array.from(document.querySelectorAll('.slide'));
   let activeSlide = slides.find(item => item.hidden === false);
   let activeSlideIndex = slides.indexOf(activeSlide);
   let phoneVertical = document.querySelector('.phone__vertical');
@@ -150,3 +211,73 @@ const addSliderClickHandler = () => {
     }
   })
 }
+/*const addSliderClickHandler = () => {
+  let slides = Array.from(document.querySelectorAll('.slide'));
+  let activeSlide = slides[0];
+  let activeSlideIndex = slides.indexOf(activeSlide);
+  let prevSlideIndex = activeSlideIndex - 1;
+  if(prevSlideIndex < 0) prevSlideIndex = slides.length-1;
+  let nextSlideIndex = activeSlideIndex + 1;
+  if(nextSlideIndex === slides.length) nextSlideIndex = 0;
+  let phoneVertical = document.querySelector('.phone__vertical');
+  let phoneHorizontal = document.querySelector('.phone__horizontal');
+  let clickedItem;
+  document.querySelector('.slider').addEventListener('click', (event) => {
+    clickedItem = event.target;
+    // Slider buttons
+    if(clickedItem.classList.contains('slider__prev')){
+      prevSlideIndex = activeSlideIndex;
+      activeSlideIndex--;
+      nextSlideIndex++;
+      if(activeSlideIndex === slides.length) activeSlideIndex = 0;
+      if(activeSlideIndex < 0) activeSlideIndex = slides.length-1;
+      if(prevSlideIndex < 0) prevSlideIndex = slides.length-1;
+      if(prevSlideIndex === slides.length) prevSlideIndex = 0;
+    }
+    if(clickedItem.classList.contains('slider__next')){
+      slides[nextSlideIndex].style.transform = 'translate(-1020px)';
+      slides[nextSlideIndex].style.left = '-1020px';
+      slides[activeSlideIndex].style.transform = 'translate(0)';
+      slides[activeSlideIndex].style.left = '0px';
+      slides[activeSlideIndex].style.transform = 'translate(1020px)';
+      slides[nextSlideIndex].style.transform = 'translate(1020px)';
+      prevSlideIndex = activeSlideIndex;
+      activeSlideIndex = nextSlideIndex;
+      nextSlideIndex = activeSlideIndex + 1;
+      if(nextSlideIndex === slides.length) nextSlideIndex = 0;
+      //slides[prevSlideIndex].style.transform = 'translate(0px)';
+      //slides[prevSlideIndex].style.left = '-1020px';
+      //slides[nextSlideIndex].style.transform = 'translate(0px)';
+      //slides[nextSlideIndex].style.left = 0 -slides[activeSlideIndex].offsetWidth + 'px';
+    }
+    //slides.forEach(item => {item.style.opacity = 0; item.style.zIndex = "";});
+    //slides[activeSlideIndex].style.opacity = 100;
+    //slides[activeSlideIndex].style.zIndex = 10
+
+    // Phones
+    if(clickedItem.classList.contains('phone__vertical')){
+      if(phoneVertical.dataset.active === "true"){
+        phoneVertical.classList.remove('iphone-vertical');
+        phoneVertical.classList.add('iphone-vertical_disabled');
+        phoneVertical.dataset.active = "false";
+      } else{
+        phoneVertical.classList.remove('iphone-vertical_disabled');
+        phoneVertical.classList.add('iphone-vertical');
+        phoneVertical.dataset.active = "true";
+      }
+    }
+    if(clickedItem.classList.contains('phone__horizontal')){
+      if(phoneHorizontal.dataset.active === "true"){
+        phoneHorizontal.classList.remove('iphone-horizontal');
+        phoneHorizontal.classList.add('iphone-horizontal_disabled');
+        phoneHorizontal.dataset.active = "false";
+      } else{
+        phoneHorizontal.classList.remove('iphone-horizontal_disabled');
+        phoneHorizontal.classList.add('iphone-horizontal');
+        phoneHorizontal.dataset.active = "true";
+      }
+    }
+  })
+}
+*/
+//////////////////////////////////////////
