@@ -1,6 +1,7 @@
 .slider{
   position: relative;
   padding-bottom: 600px;
+  overflow: hidden;
 }
 .slide1{
   box-sizing: border-box;
@@ -12,14 +13,14 @@
   justify-content: flex-start;
   background-color: $color-brand;
   border-bottom: solid 6px $color-slider-border;
-  transition: .5s;
+  transition: 1s;
   z-index: 10;
 
   &__content{
     display: flex;
     margin: auto;
     width: 100%;
-    padding: 0 54px;
+    padding: 0 70.5px;
     align-items: center;
     justify-content: space-between;
   }
@@ -37,7 +38,7 @@
   background-position: 50%;
   background-repeat: no-repeat;
   border-bottom: solid 6px $color-slider-second;
-  transition: .5s;
+  transition: 1s;
   opacity: 0;
 
   &__content{
@@ -49,7 +50,23 @@
     align-items: center;
     justify-content: center;
   }
-}.slide2 .slider__next, .slide2 .slider__prev{
+}
+.slider__prev{
+  position: absolute;
+  top: 46.8%;
+  left: 4.2%;
+  z-index: 50;
+  cursor: pointer;
+}
+.slider__next{
+  position: absolute;
+  top: 46.8%;
+  right: 3.9%;
+  z-index: 50;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.slide2 .slider__next, .slide2 .slider__prev{
   margin-bottom: 30px;
 }
 .phone__vertical{

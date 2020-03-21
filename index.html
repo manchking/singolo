@@ -12,38 +12,40 @@
       <nav class="header__navigation">
         <ul class="nav-bar">
           <li class="nav-bar__item">
-            <a class="nav-bar__item__link_active" href="#home">HOME</a>
+            <a id="nav-bar_home" class="nav-bar__item__link_active">HOME</a>
           </li>
           <li class="nav-bar__item">
-            <a class="nav-bar__item__link" href="#services">SERVICES</a>
+            <a id="nav-bar_services" class="nav-bar__item__link">SERVICES</a>
           </li>
           <li class="nav-bar__item">
-            <a class="nav-bar__item__link" href="#portfolio">PORTFOLIO</a>
+            <a id="nav-bar_portfolio" class="nav-bar__item__link">PORTFOLIO</a>
           </li>
           <li class="nav-bar__item">
-            <a class="nav-bar__item__link" href="#about">ABOUT</a>
+            <a id="nav-bar_about" class="nav-bar__item__link">ABOUT</a>
           </li>
           <li class="nav-bar__item">
-            <a class="nav-bar__item__link" href="#contact">CONTACT</a>
+            <a id="nav-bar_contact" class="nav-bar__item__link">CONTACT</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="slider">
-        <div class="slide1">
-          <div class="slider__prev btn-arrow-left"></div>
+        <img src="assets/arrow.png" class="slider__prev"/>
+        <div class="slide slide1">
+          <!--<div class="slider__prev btn-arrow-left"></div>-->
           <div class="slide1__content">
             <div class="phone__vertical iphone-vertical" data-active="true"></div>
             <div class="phone__horizontal iphone-horizontal" data-active="true"></div>
           </div>
-          <div class="slider__next btn-arrow-right"></div>
+          <!--<div class="slider__next btn-arrow-right"></div>-->
         </div>
-        <div class="slide2">
-          <div class="slider__prev btn-arrow-left"></div>
+        <div class="slide slide2">
+          <!--<div class="slider__prev btn-arrow-left"></div>-->
           <div class="slide2__content"></div>
-          <div class="slider__next btn-arrow-right"></div>
+          <!--<div class="slider__next btn-arrow-right"></div>-->
         </div>
+        <img src="assets/arrow.png" class="slider__next"/>
       </section>
       <section id="services" class="services">
         <h2>Our Services</h2>
@@ -302,5 +304,11 @@
     </main>
   </div>
   <script src="script.js"></script>
+  <div class="preloadImgs">
+    <img src="assets/iphone-horizontal.png" alt="">
+    <img src="assets/iphone-vertical.png.png" alt="">
+    <img src="assets/phone-horizontal_disabled.png" alt="">
+    <img src="assets/phone-vertical_disabled.png" alt="">
+  </div>
 </body>
 </html>

@@ -2,12 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //position: sticky;
-  //top: 0px;
+  position: sticky;
+  top: 0px;
+  //padding-top: 42px;
   padding: 0 40px;
   height: 89px;
   background: $color-brand-dark;
   border-bottom: solid 6px $color-header-border;
+  z-index: 100;
 }
 .header__navigation{
   margin-top: 8px;
