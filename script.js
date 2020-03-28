@@ -5,6 +5,89 @@ window.onload = function() {
   addGalleryClickHandler();
   showHideModal();
   windowScrollHandler();
+  burgerNavHandler();
+  windowScrollHandlerTest();
+}
+
+const windowScrollHandlerTest = () => {
+  let activeNav = document.querySelector('.nav-sidebar__item__link_active');
+  window.addEventListener('scroll', (event) => {
+    let servicesPosY = document.getElementById('services').getBoundingClientRect().top;
+    let portfolioPosY = document.getElementById('portfolio').getBoundingClientRect().top;
+    let aboutPosY = document.getElementById('about').getBoundingClientRect().top;
+    let contactPosY = document.getElementById('contact').getBoundingClientRect().top;
+    let prevNav = document.querySelector('.nav-sidebar__item__link_active');
+    if(window.pageYOffset < 70){
+      activeNav = document.getElementById('nav-sidebar_home');
+      prevNav.className = 'nav-sidebar__item__link';
+      activeNav.className = 'nav-sidebar__item__link_active';
+    }
+    if(Math.abs(servicesPosY) < 100){
+      activeNav = document.getElementById('nav-sidebar_services');
+      prevNav.className = 'nav-sidebar__item__link';
+      activeNav.className = 'nav-sidebar__item__link_active';
+    }
+    if(Math.abs(portfolioPosY) < 100){
+      activeNav = document.getElementById('nav-sidebar_portfolio');
+      prevNav.className = 'nav-sidebar__item__link';
+      activeNav.className = 'nav-sidebar__item__link_active';
+    }
+    if(Math.abs(aboutPosY) < 100){
+      activeNav = document.getElementById('nav-sidebar_about');
+      prevNav.className = 'nav-sidebar__item__link';
+      activeNav.className = 'nav-sidebar__item__link_active';
+    }
+    if(Math.abs(contactPosY) < 370){
+      activeNav = document.getElementById('nav-sidebar_contact');
+      prevNav.className = 'nav-sidebar__item__link';
+      activeNav.className = 'nav-sidebar__item__link_active';
+    }
+  })
+}
+
+//Burger
+const burgerNavHandler = () => {
+  let burger = document.querySelector('.header__burger');
+  let sidebar = document.querySelector('.nav-sidebar');
+  let logo = document.querySelector('.header__logo');
+  let overlay = document.querySelector('.overlay');
+  let toggleBurger = function(){
+    burger.classList.toggle('open');
+    sidebar.classList.toggle('open');
+    logo.classList.toggle('left');
+    overlay.classList.toggle('hidden');
+  }
+  burger.addEventListener('click', (event) => {
+      toggleBurger();
+  })
+  sidebar.addEventListener('blur', toggleBurger);
+  sidebar.addEventListener('click', (event) => {
+    if(event.target.classList.contains('nav-sidebar__item__link')) {
+      let clickedItem = event.target;
+      switch(clickedItem.innerHTML){
+        case 'HOME':
+          scrollToId('home');
+          sidebar.blur();
+          break;
+        case 'SERVICES':
+          scrollToId('services');
+          sidebar.blur();
+          break;
+        case 'PORTFOLIO':
+          scrollToId('portfolio');
+          sidebar.blur();
+          break;
+        case 'ABOUT':
+          scrollToId('about');
+          sidebar.blur();
+          break;
+        case 'CONTACT':
+          scrollToId('contact');
+          sidebar.blur();
+          break;
+      }
+    }
+  })
 }
 
 // Navigation
@@ -45,7 +128,7 @@ const scrollToId = (id) => {
 }
 
 const windowScrollHandler = () => {
-  let activeNav = document.getElementById('nav-bar_home');
+  let activeNav = document.querySelector('.nav-bar__item__link_active');
   window.addEventListener('scroll', (event) => {
     let servicesPosY = document.getElementById('services').getBoundingClientRect().top;
     let portfolioPosY = document.getElementById('portfolio').getBoundingClientRect().top;
@@ -129,10 +212,10 @@ const removeHighlightGalleryImg = () => {
     removeItem.classList.remove('gallery__preview_active');
   }
 }
-
 // Modal window
 const showHideModal = () => {
   let form = document.forms.contact;
+  let overlay = document.querySelector('.overlay');
   form.addEventListener('submit', (event) =>{
     event.preventDefault();
     let subject = form.subject.value;
@@ -143,8 +226,6 @@ const showHideModal = () => {
     if(!description){
       description = 'No description';
     }
-    let overlay = document.createElement('div');
-    overlay.className = 'overlay';
     let modal = document.createElement('div');
     modal.className = 'modal';
     modal.innerHTML = `<p class="modal__title">Mail send</p>
@@ -152,21 +233,49 @@ const showHideModal = () => {
       <p><span class="modal__subtitle"> Description: </span>${description}</p>
       <input type="button" value="OK" class="modal__button">`;
     form.submit.disabled = 1;
-    document.body.prepend(overlay);
-    document.querySelector('.overlay').append(modal);
+    overlay.classList.toggle('hidden');
+    overlay.append(modal);
     document.querySelector('.modal__button').addEventListener('click', () => {
-      document.querySelector('.overlay').remove();
+      overlay.classList.toggle('hidden');
       form.name.value = '';
       form.email.value = '';
       form.subject.value = '';
       form.description.value = '';
       form.submit.disabled = 0;
+      modal.remove();
     })
   })
 }
 
+//const addSliderClickHandler = () => {
+//  let
+//    slider = document.querySelector('.slider'),
+//    sliderContainer = slider.querySelector('.slider__container'),
+//    controlPrev = slider.querySelector('.slider__prev'),
+//    controlNext = slider.querySelector('.slider__next'),
+//    slides = slider.querySelectorAll('.slide'),
+//    activeIndex = 0,
+//    containerWidth = parseFloat(getComputedStyle(sliderContainer).width),
+//    slideWidth = parseFloat(getComputedStyle(slides[0]).width),
+//    step = slideWidth / containerWidth * 100;
+//
+//  let changeSlide = (direction) => {
+//    let leftIndex, rightIndex;
+//    if(activeIndex - 1 < 0) leftIndex = slides.length - 1;
+//    if(activeIndex + 1 >= slides.length - 1) rightIndex = 0;
+//   if(direction === 'left'){
+//      slides[rightIndex].style.left = step+'%';
+//    }
+//  }
+//
+//  document.querySelector('.slider').addEventListener('click', (event) => {
+//    if(event.target === controlPrev) changeSlide('left');
+//  })
+//}
+
 // Slider
 const addSliderClickHandler = () => {
+  let slider = document.querySelector('.slider');
   let slides = Array.from(document.querySelectorAll('.slide'));
   let activeSlide = slides.find(item => item.hidden === false);
   let activeSlideIndex = slides.indexOf(activeSlide);
@@ -176,16 +285,17 @@ const addSliderClickHandler = () => {
     let clickedItem = event.target;
     // Slider buttons
     if(clickedItem.classList.contains('slider__prev')){
+      slider.classList.toggle('blue');
       activeSlideIndex--;
     }
     if(clickedItem.classList.contains('slider__next')){
+      slider.classList.toggle('blue');
       activeSlideIndex++;
     }
     if(activeSlideIndex === slides.length) activeSlideIndex = 0;
     if(activeSlideIndex < 0) activeSlideIndex = slides.length-1;
-    slides.forEach(item => {item.style.opacity = 0; item.style.zIndex = "";});
-    slides[activeSlideIndex].style.opacity = 100;
-    slides[activeSlideIndex].style.zIndex = 10;
+    slides.forEach(item => {item.classList.remove('slide_active')});
+    slides[activeSlideIndex].classList.toggle('slide_active');
     // Phones
     if(clickedItem.classList.contains('phone__vertical')){
       if(phoneVertical.dataset.active === "true"){
@@ -211,73 +321,3 @@ const addSliderClickHandler = () => {
     }
   })
 }
-/*const addSliderClickHandler = () => {
-  let slides = Array.from(document.querySelectorAll('.slide'));
-  let activeSlide = slides[0];
-  let activeSlideIndex = slides.indexOf(activeSlide);
-  let prevSlideIndex = activeSlideIndex - 1;
-  if(prevSlideIndex < 0) prevSlideIndex = slides.length-1;
-  let nextSlideIndex = activeSlideIndex + 1;
-  if(nextSlideIndex === slides.length) nextSlideIndex = 0;
-  let phoneVertical = document.querySelector('.phone__vertical');
-  let phoneHorizontal = document.querySelector('.phone__horizontal');
-  let clickedItem;
-  document.querySelector('.slider').addEventListener('click', (event) => {
-    clickedItem = event.target;
-    // Slider buttons
-    if(clickedItem.classList.contains('slider__prev')){
-      prevSlideIndex = activeSlideIndex;
-      activeSlideIndex--;
-      nextSlideIndex++;
-      if(activeSlideIndex === slides.length) activeSlideIndex = 0;
-      if(activeSlideIndex < 0) activeSlideIndex = slides.length-1;
-      if(prevSlideIndex < 0) prevSlideIndex = slides.length-1;
-      if(prevSlideIndex === slides.length) prevSlideIndex = 0;
-    }
-    if(clickedItem.classList.contains('slider__next')){
-      slides[nextSlideIndex].style.transform = 'translate(-1020px)';
-      slides[nextSlideIndex].style.left = '-1020px';
-      slides[activeSlideIndex].style.transform = 'translate(0)';
-      slides[activeSlideIndex].style.left = '0px';
-      slides[activeSlideIndex].style.transform = 'translate(1020px)';
-      slides[nextSlideIndex].style.transform = 'translate(1020px)';
-      prevSlideIndex = activeSlideIndex;
-      activeSlideIndex = nextSlideIndex;
-      nextSlideIndex = activeSlideIndex + 1;
-      if(nextSlideIndex === slides.length) nextSlideIndex = 0;
-      //slides[prevSlideIndex].style.transform = 'translate(0px)';
-      //slides[prevSlideIndex].style.left = '-1020px';
-      //slides[nextSlideIndex].style.transform = 'translate(0px)';
-      //slides[nextSlideIndex].style.left = 0 -slides[activeSlideIndex].offsetWidth + 'px';
-    }
-    //slides.forEach(item => {item.style.opacity = 0; item.style.zIndex = "";});
-    //slides[activeSlideIndex].style.opacity = 100;
-    //slides[activeSlideIndex].style.zIndex = 10
-
-    // Phones
-    if(clickedItem.classList.contains('phone__vertical')){
-      if(phoneVertical.dataset.active === "true"){
-        phoneVertical.classList.remove('iphone-vertical');
-        phoneVertical.classList.add('iphone-vertical_disabled');
-        phoneVertical.dataset.active = "false";
-      } else{
-        phoneVertical.classList.remove('iphone-vertical_disabled');
-        phoneVertical.classList.add('iphone-vertical');
-        phoneVertical.dataset.active = "true";
-      }
-    }
-    if(clickedItem.classList.contains('phone__horizontal')){
-      if(phoneHorizontal.dataset.active === "true"){
-        phoneHorizontal.classList.remove('iphone-horizontal');
-        phoneHorizontal.classList.add('iphone-horizontal_disabled');
-        phoneHorizontal.dataset.active = "false";
-      } else{
-        phoneHorizontal.classList.remove('iphone-horizontal_disabled');
-        phoneHorizontal.classList.add('iphone-horizontal');
-        phoneHorizontal.dataset.active = "true";
-      }
-    }
-  })
-}
-*/
-//////////////////////////////////////////

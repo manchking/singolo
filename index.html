@@ -2,13 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Singolo</title>
 </head>
 <body>
+  <div class="overlay hidden"></div>
   <div class="wrapper">
     <header id="home" class="header">
-      <h1 class="logo">SINGOLO<span class="logo_colored">*</span></h1>
+      <div class="header__burger nav-burger">
+        <div class="nav-burger__bar"></div>
+      </div>
+      <h1 class="header__logo logo">SINGOLO<span class="logo_colored">*</span></h1>
       <nav class="header__navigation">
         <ul class="nav-bar">
           <li class="nav-bar__item">
@@ -28,22 +33,27 @@
           </li>
         </ul>
       </nav>
+      <nav class="nav-sidebar" tabindex="0">
+        <ul>
+          <li><a id="nav-sidebar_home" class="nav-sidebar__item__link_active">HOME</a></li>
+          <li><a id="nav-sidebar_services" class="nav-sidebar__item__link">SERVICES</a></li>
+          <li><a id="nav-sidebar_portfolio" class="nav-sidebar__item__link">PORTFOLIO</a></li>
+          <li><a id="nav-sidebar_about" class="nav-sidebar__item__link">ABOUT</a></li>
+          <li><a id="nav-sidebar_contact" class="nav-sidebar__item__link">CONTACT</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="slider">
         <img src="assets/arrow.png" class="slider__prev"/>
-        <div class="slide slide1">
-          <!--<div class="slider__prev btn-arrow-left"></div>-->
-          <div class="slide1__content">
+        <div class="slider__container">
+          <div class="slide slide_active slide1">
             <div class="phone__vertical iphone-vertical" data-active="true"></div>
             <div class="phone__horizontal iphone-horizontal" data-active="true"></div>
           </div>
-          <!--<div class="slider__next btn-arrow-right"></div>-->
-        </div>
-        <div class="slide slide2">
-          <!--<div class="slider__prev btn-arrow-left"></div>-->
-          <div class="slide2__content"></div>
-          <!--<div class="slider__next btn-arrow-right"></div>-->
+          <div class="slide slide2">
+            <img src="assets/slide2_content.png" class="slide2__content" alt="slide2 phone">
+          </div>
         </div>
         <img src="assets/arrow.png" class="slider__next"/>
       </section>
@@ -55,7 +65,7 @@
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </div>
         <div class="services__list layout-column">
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_pen"></span>
             </span>
@@ -67,7 +77,7 @@
               </p>
             </div>
           </div>
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_bulb"></span>
             </span>
@@ -79,7 +89,7 @@
               </p>
             </div>
           </div>
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_heart"></span>
             </span>
@@ -91,7 +101,7 @@
               </p>
             </div>
           </div>
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_phone"></span>
             </span>
@@ -103,7 +113,7 @@
               </p>
             </div>
           </div>
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_bubble"></span>
             </span>
@@ -115,7 +125,7 @@
               </p>
             </div>
           </div>
-          <div class="services__item item-3-column">
+          <div class="services__item">
             <span class="services__item__icon icon-circle">
               <span class="ic_star"></span>
             </span>
@@ -145,40 +155,40 @@
           <div class="layout-column gallery__images">
             <img src="assets/gallery/prev-imgs/prev1.png" alt="preview image" 
               data-tag="web design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev2.png" alt="preview image" 
               data-tag="graphic design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev3.png" alt="preview image" 
               data-tag="graphic design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev4.png" alt="preview image" 
               data-tag="graphic design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev5.png" alt="preview image" 
               data-tag="artwork"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev6.png" alt="preview image" 
               data-tag="web design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev7.png" alt="preview image" 
               data-tag="artwork"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev8.png" alt="preview image" 
               data-tag="web design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev9.png" alt="preview image" 
               data-tag="web design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev10.png" alt="preview image" 
               data-tag="artwork"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev11.png" alt="preview image" 
               data-tag="graphic design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
             <img src="assets/gallery/prev-imgs/prev12.png" alt="preview image" 
               data-tag="web design"
-              class="item-4-column gallery__preview">
+              class="gallery__preview">
           </div>
         </div>
       </section>
@@ -190,7 +200,7 @@
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </div>
         <div class="about-us__items layout-column">
-          <div class="about-us__item item-3-column">
+          <div class="about-us__item">
             <img src="assets/about-us/photos/adam-jensen.png" alt="photo" class="about-us__photo">
             <div class="about-us__item__title">Adam Jensen</div>
             <div class="about-us__item__text">Quisque luctus, quam eget molestie commodo, 
@@ -203,7 +213,7 @@
               <a class="ic_linkedin" href=""></a>
             </div>
           </div>
-          <div class="about-us__item item-3-column">
+          <div class="about-us__item">
             <img src="assets/about-us/photos/desmond-miles.png" alt="photo" class="about-us__photo">
             <div class="about-us__item__title">Desmond Miles</div>
             <div class="about-us__item__text">Curabitur vestibulum eget mauris quis laoreet. 
@@ -216,7 +226,7 @@
               <a class="ic_linkedin" href=""></a>
             </div>
           </div>
-          <div class="about-us__item item-3-column">
+          <div class="about-us__item">
             <img src="assets/about-us/photos/scolara-visari.png" alt="photo" class="about-us__photo">
             <div class="about-us__item__title">Scolara Visari</div>
             <div class="about-us__item__text">Nulla sed nunc et tortor luctus faucibus.
@@ -238,7 +248,7 @@
           nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </div>
-        <div class="get-a-quote__form-container">
+        <div class="get-a-quote__container">
           <form name="contact" action="" class="get-a-quote__form form-contact">
             <div class="form-contact__container">
               <input class="form-contact__name" 
@@ -263,50 +273,50 @@
                 cols="30" 
                 rows="8"
                 placeholder="Describe your project in detail..."></textarea>
-            </div>
-            <div class="form-contact__contacts">
-              <h3 class="form-contact__contacts__title">Contact Information</h3>
-              <div class="form-contact__contacts__subtitle subtitle_small">
-                Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. 
-                Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
-                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
-                et consequat felis.
-                <div class="form-contact__contacts__container">
-                  <p class="form-contact__contacts__icons">
-                    <br><span class="ic_contact-location"></span>
-                    <br><span class="ic_contact-phone"></span>
-                    <br><span class="ic_contact-mail"></span>
-                  </p>
-                  <p class="form-contact__contacts__data"> 
-                    <br>Elm St. 14/05 Lost City
-                    <br><a href="tel:+035283318635">03528 331 86 35</a>
-                    <br><a href="mailto:info@singolo.com">info@singolo.com</a>
-                  </p>
-                </div>
-                <input class="form-contact__submit-btn" 
-                  name="submit"
-                  type="submit" 
-                  value="SEND YOUR INFO">
-              </div>
+              <input class="form-contact__submit-btn" 
+                name="submit"
+                type="submit" 
+                value="SEND YOUR INFO">
             </div>
           </form>
+          <div class="get-a-quote__contacts">
+            <h3 class="get-a-quote__contacts__title">Contact Information</h3>
+            <div class="get-a-quote__contacts__subtitle subtitle_small">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. 
+              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
+              et consequat felis.
+              <div class="get-a-quote__contacts__container">
+                <p class="get-a-quote__contacts__icons">
+                  <br><span class="ic_contact-location"></span>
+                  <br><span class="ic_contact-phone"></span>
+                  <br><span class="ic_contact-mail"></span>
+                </p>
+                <p class="get-a-quote__contacts__data"> 
+                  <br>Elm St. 14/05 Lost City
+                  <br><a href="tel:+035283318635">03528 331 86 35</a>
+                  <br><a href="mailto:info@singolo.com">info@singolo.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <footer class="footer">
-        <p class="footer__copyright subtitle_small">&copy; Copyright 2013</p>
-        <div class="footer__social">
-          <a class="ic_facebook" href=""></a>
-          <a class="ic_google" href=""></a>
-          <a class="ic_twitter" href=""></a>
-          <a class="ic_linkedin" href=""></a>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <p class="footer__copyright subtitle_small">&copy; Copyright 2013</p>
+      <div class="footer__social">
+        <a class="ic_facebook" href=""></a>
+        <a class="ic_google" href=""></a>
+        <a class="ic_twitter" href=""></a>
+        <a class="ic_linkedin" href=""></a>
+      </div>
+    </footer>
   </div>
   <script src="script.js"></script>
   <div class="preloadImgs">
     <img src="assets/iphone-horizontal.png" alt="">
-    <img src="assets/iphone-vertical.png.png" alt="">
+    <img src="assets/iphone-vertical.png" alt="">
     <img src="assets/phone-horizontal_disabled.png" alt="">
     <img src="assets/phone-vertical_disabled.png" alt="">
   </div>
