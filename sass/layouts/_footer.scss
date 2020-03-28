@@ -3,6 +3,9 @@
   padding: 22px 40px;
   justify-content: space-between;
   background-color: $color-brand-dark;
+  @include media-mobile{
+    justify-content: center;
+  }
 }
 .footer__copyright{
   padding-top: 3px;
@@ -11,10 +14,16 @@
   display: inline-block;
   line-height: 0;
   font-size: 11.7px;
+  @include media-mobile{
+    display: none;
+  }
 }
 .footer__social{
   display: flex;
   & > *{
     margin-left: 8px;
+  }
+  @include media-mobile{
+    padding-right: 7px;
   }
 }

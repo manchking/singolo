@@ -39,3 +39,10 @@ h3{
   left:9999px;
   opacity:0;
 }
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $color-brand-dark, $alpha: 0.6);
+  z-index: 5;
+}

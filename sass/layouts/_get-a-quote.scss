@@ -1,19 +1,88 @@
 .get-a-quote{
-  padding: 44px 40px 51px 40px;
+  padding: 44px 40px 40px 40px;
   background-color: $color-brand;
   color: $color-text-pinky-light;
   border-bottom: solid 6px $color-slider-border;
+  @include media-tablet{
+    padding: 38px 40px 27px 40px;
+  }
+  @include media-mobile{
+    padding: 7.7vw 8vw 7vw 8vw;
+    border-bottom: none;
+  }
 }
 .get-a-quote__subtitle{
   padding-top: 2px;
+  @include media-mobile{
+    text-align: start;
+    padding-right: 2px;
+  }
 }
-.get-a-quote__form-container{
+.get-a-quote__container{
+  display: flex;
   margin-top: 35px;
+  @include media-tablet{
+    margin-top: 15px;
+  }
+  @include media-mobile{
+    display: block;
+  }
 }
 .get-a-quote__form{
   padding-top: 9px;
-  flex-basis: 65.8%;
+  flex-basis: 66%;
+  width: 100%;
+  max-width: 620px;
 }
 .get-a-quote__form textarea{
-  height: 202px;
+  height: 159px;
+}
+.get-a-quote__contacts{
+  flex-basis: 30%;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 20px;
+  //margin-top: -9px;
+  @include media-tablet{
+    flex-basis: 32%;
+  }
+  @include media-mobile{
+    margin: 0;
+    margin-top: 36px;
+  }
+}
+.get-a-quote__contacts__title{
+  font-weight: bold;
+  letter-spacing: .2px;
+}
+.get-a-quote__contacts__subtitle{
+  text-align: justify;
+  word-spacing: -1px;
+  @include media-tablet{
+    margin-top: -5px;
+  }
+}
+.get-a-quote__contacts__icons{
+  display: block;
+  text-align: center;
+  margin-right: 10px;
+}
+.get-a-quote__contacts__data{
+  display: block;
+  text-align: left;
+  letter-spacing: .2px;
+  & > a {
+    text-decoration: none;
+    color: $color-text-pinky-light;
+  }
+}
+.get-a-quote__contacts__container{
+  display: flex;
+  margin-top: -13px;
+  @include media-tablet{
+    margin-top: -23px;
+  }
+  @include media-mobile{
+    line-height: 2;
+  }
 }

@@ -19,9 +19,27 @@
     line-height: 22px;
     box-sizing: border-box;
     outline: none;
+    @include media-tablet{
+      margin-bottom: 12px;
+    }
   }
   & > input{
     width: 100%;
+
+    &[type="submit"]{
+      width: 100%;
+      font-size: 20px;
+      color: $color-brand;
+      font-weight: bold;
+      background-color: $color-text-pinky-light;
+      @include media-tablet{
+        margin-top: 18px;
+      }
+      &:hover{
+        background-color: #ffe341;
+        transition: ease-out 0.3s;
+      }
+    }
   }
   & > textarea{
     width: 100%;
@@ -31,63 +49,9 @@
     color: $color-text-pinky;
   }
 }
-.form-contact__contacts{
-  flex-basis: 48.4%;
-  margin-left: 20px;
-  margin-top: -9px;
-}
-.form-contact__contacts__title{
-  font-weight: bold;
-  letter-spacing: .2px;
-}
-.form-contact__contacts__subtitle{
-  text-align: justify;
-  word-spacing: -1px;
-}
-.form-contact__contacts__icons{
-  display: block;
-  text-align: center;
-  margin-right: 10px;
-}
-.form-contact__contacts__data{
-  display: block;
-  text-align: left;
-  letter-spacing: .2px;
-  & > a {
-    text-decoration: none;
-    color: $color-text-pinky-light;
-  }
-}
-.form-contact__contacts__container{
-  display: flex;
-  margin-top: -13px;
-}
 .form-contact__submit-btn{
-    display: block;
-    width: 100%;
-    margin-top: 30px;
-    padding: 8px 15px;
-    color: $color-content-light;
-    //background: linear-gradient(180deg, $color-text-pinky 0%, $color-background-pinky 50%, $color-brand 100%);
-    background-color: $color-background-pinky;
-    border: solid 1px $color-text-pinky;
-    border-radius: 6px;
     -webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 22px;
-    box-sizing: border-box;
     cursor: pointer;
-    outline: none;
-
-    &:hover{
-      border: solid 1px white;
-      transition: ease-out 0.3s;
-      background-color: $color-text-pinky-light;
-      color: $color-brand;
-    }
 }
